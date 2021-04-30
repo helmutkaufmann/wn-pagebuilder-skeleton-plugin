@@ -64,7 +64,8 @@ You can reference the individual attributes defined in the YAML as per the above
 There is one more file that needs attention: **components/pagebuilder/default.htm**:
 ```
 {% for i in pagebuilder %}
-	{% set thisPartial = ("@" ~ i._group) %}
+   {% set thisPartial = ("@" ~ i._group) %}
+   {% partial thisPartial element=i %}					  
 {% endfor %}
 ```
 This file defines renders the individual Page Builder Elements that have been defined. You will need to adapt this, 
