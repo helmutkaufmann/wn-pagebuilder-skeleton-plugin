@@ -1,0 +1,23 @@
+tabs:
+    stretch: true
+    defaultTab: Settings
+    
+    fields:
+        info_section_1:
+            label: Settings
+            type: section
+            tab: Settings
+            comment: Let us add some plugin-wide settings. 
+        setting_1:
+            label: Setting 1
+            span: full
+            type: text
+            comment: This is just some dummy default text.
+            tab: Settings
+
+        setting_2:
+            label: Setting 2
+            span: full
+            type: textarea
+            comment: This is just some dummy default text area
+            tab: Settings
