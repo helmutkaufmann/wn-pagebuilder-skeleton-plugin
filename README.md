@@ -86,6 +86,9 @@ description = "Page Builder"
 Create a new Static Page. In the secondary tab wou should now see tab "Page Builder" and in there a button 
 on the bottom reading "ADD PAGE BUILDER CPOMPONENT". Just press it - the rest should be clear.
 
+### One more thing... Site-wide settings
+If your plugin requires site-wide/plugin-wide settimgs, these can be defined in the backend. YOu just need to add respective field defintions to **models/settings/pagebuilder.yaml**.
+
 ## Next Steps
 This is just a simple example of how this works. This Plugin is NOT production ready and the next version will 
 over-write the YAML and the components that you have defined. Suggest not to auto update. The next version will 

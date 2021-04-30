@@ -81,14 +81,12 @@ public function boot()
      *
      * @return array
      */
-    public function registerPermissions()
+ public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'mercator.pagebuilder.some_permission' => [
-                'tab' => 'PageBuilder',
-                'label' => 'Some permission'
+            'mercator.pagebuilder.pagebuilder' => [
+                'tab' => 'Page Builder Extensions',
+                'label' => 'Permission for Page Builder Extensions',
             ],
         ];
     }
@@ -112,4 +110,22 @@ public function boot()
             ],
         ];
     }
+    
+	public function registerSettings()
+    {
+         return [
+        'settings' => [
+            'label'       => 'Page Builder Extensions',
+            'description' => 'Configuration/Defaults',
+            'category'    => 'Page Builder',
+            'icon'        => 'icon-cog',
+            'class'       => 'Mercator\PageBuilder\Models\Settings',
+            'order'       => 500,
+            'keywords'    => 'TPage Builder Extensions',
+            'permissions' => ['mercator.pagebuilder.pagebuilder']
+        ]
+    ];
+
+
+}
 }
