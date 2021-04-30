@@ -1,6 +1,7 @@
 # Mercator Page Builder
 This is a WinterCM plugin that allows you to create custom page builders for Winter's Static Pages. It has been tested with WinterCMS 1.1.3.
 
+
 ## Installation
 ```
 composer require mercator/wn-pagebuilder-plugin
