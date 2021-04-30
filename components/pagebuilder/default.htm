@@ -1,0 +1,11 @@
+Page Builder Start
+{% for i in pagebuilder %}
+						  {% set thisPartial = ("@" ~ i._group) %}
+						  {% if partial(thisPartial) %}
+							  {% partial thisPartial element=i %}
+						  {% else %}
+							  {% partial thisPartial element=i %}
+						  {% endif %}      
+				
+    			{% endfor %}
+Page Builder STOP

@@ -1,0 +1,38 @@
+richtext:
+  name: Rich Text
+  description: Rich Text Field
+  icon: icon-paragraph
+  fields:
+    label:
+      label: Rich Text
+      type: section
+      comment: Rich text field.
+      span: left
+    header:
+      label: Haeder text
+      type: text
+      span: full
+      placeholder: 'A H1 header'
+    text:
+      label: Text
+      type: richeditor
+      size: giant
+      placeholder: 'Content including tables, images, ...'
+
+markdown:
+  name: Markdown Text
+  description: Markdown text field
+  icon: icon-paragraph
+  fields:
+    label:
+      label: Markdown Text
+      type: section
+      comment: Markdown text field.
+      span: left
+    text:
+      label: Text
+      type: markdown
+      placeholder: 'Content formatted in Markdown language including tables, images, ...'
+      
+
+

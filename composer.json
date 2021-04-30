@@ -1,0 +1,19 @@
+{
+    "name": "mercator/wn-pagebuilder-plugin",
+    "type": "winter-plugin",
+    "description": "Winter CMS Page Builder Demo Plugin",
+    "homepage": "https://github.com/helmutkaufmann/wn-twigext-plugin",
+    "keywords": ["winter", "wintercms", "laravel", "page builder", "page", "builder", "extension", "plugin", "php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Helmut Kaufmann",
+            "role": "Author"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0"
+    }
+}
