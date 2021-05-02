@@ -1,5 +1,5 @@
 {
-    "name": "mercator/wn-pagebuilder-plugin",
+    "name": "mercator/wn-pagebuilder-skeleton-plugin",
     "type": "winter-plugin",
     "description": "Winter CMS Page Builder Demo Plugin",
     "homepage": "https://github.com/helmutkaufmann/wn-twigext-plugin",
