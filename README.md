@@ -3,7 +3,7 @@ This is a WinterCM plugin that allows you to create custom page builders for Win
 
 ## Installation - Composer
 ```
-composer require mercator/wn-pagebuilder-plugin
+composer require mercator/wn-pagebuilder-skeleton-plugin
 ```
 ## Configuration
 ### Page Builder Definition
