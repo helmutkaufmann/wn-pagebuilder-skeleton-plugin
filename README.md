@@ -1,14 +1,17 @@
 # Mercator Page Builder
-This is a WinterCM plugin that allows you to create custom page builders for Winter's Static Pages. It has been tested with WinterCMS 1.1.3.
+This is a WinterCMS plugin that allows you to create custom page builders for Winter's Static Pages. It has been tested with WinterCMS 1.1.3.
 
 ## Installation - Composer
 ```
 composer require mercator/wn-pagebuilder-skeleton-plugin
+php artisan winter:up
 ```
 ## Configuration
 ### Page Builder Definition
 The plugin will allow you to define indvidual elements that the user can configure in the backend. 
-These are defined in a single YAML file, sich is locates in *components/partials/_pagebuilder.yaml*.
+On the frontend, the elements will then be rendered as defined in user-defined templates. 
+
+The available elements are defined in a single YAML file, wich is locates in *components/partials/_pagebuilder.yaml*.
 As a starting point, the YAML could look as follows:
 ```
 richtext:
@@ -25,7 +28,7 @@ richtext:
       label: Haeder text
       type: text
       span: full
-      placeholder: 'A H1 header'
+      placeholder: 'The H1 header'
     text:
       label: Text
       type: richeditor
@@ -47,18 +50,17 @@ markdown:
       type: markdown
       placeholder: 'Content formatted in Markdown language including tables, images, ...'
 ```
-This would provide for two elements, **richtext** and **markdown**. You can extend/replace this as required.
+This would provide for two elements, **richtext** and **markdown**. You can extend/replace the YAML as required.
 
 
 ### Page Builder Element Rendering
-Fior each element defined in the above YAML, you must create a partial in **components/partials** that renders it. 
+For each element defined in the above YAML, create a partial in **components/partials** that renders it. 
 For example, for **richtext**, create a **richtext.htm**, which could look as follows
 ```
 <H1>{{ element.header }}</H1>
 {{ element.text | raw }}
 ```
 You can reference the individual attributes defined in the YAML as per the above, e.g., "element.header" holds the H1.
-
 
 ### Page Builder Interaction
 There is one more file that needs attention: **components/pagebuilder/default.htm**:
@@ -68,9 +70,8 @@ There is one more file that needs attention: **components/pagebuilder/default.ht
    {% partial thisPartial element=i %}					  
 {% endfor %}
 ```
-This file defines renders the individual Page Builder Elements that have been defined. You will need to adapt this, 
-e.g., enhance it with CSS and alike to meet the frontend library you are using.
-
+This file renders the individual Page Builder Elements that have been defined - typically one after the other.  
+You will need to adapt this, e.g., enhance it with CSS and alike in line with the frontend library you are using.
 
 ### Layout File
 Create a layout file, the below is the most simple example. It will basically call the code you have just seen above.
